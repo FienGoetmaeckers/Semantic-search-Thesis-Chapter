@@ -15,7 +15,7 @@ library(car)
 #step 1: read in all the data, make sure only relevant data is used
 ###
 
-setwd("../../Data")
+setwd("../../Data/Study2")
 
 #read in all relevant files
 data <- read.csv("data2.csv")

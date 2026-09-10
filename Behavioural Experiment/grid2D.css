@@ -1,0 +1,176 @@
+body {
+    background-color: white;   
+    /*background-image: url(img/forestA.jpg);
+    background-size: cover;*/
+}
+.jspsych-display-element {
+    color: darkslategrey;
+    
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+.whiteboard-container {
+    position: absolute;
+    top: -1%;
+    left: 45%;
+    height: 57%;
+    width: 39%;
+    /*border: 1px solid red;*/
+}
+.history-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+.question {
+    position: absolute;
+    top: 110%;
+    left: 16%;
+    z-index: 1;
+    margin-top: 7px;
+}
+
+.score {
+    position:absolute;
+    z-index: 1;
+    top: 78%;
+    left: 0%;
+    width: 25%
+}
+#jspsych-survey-html-form-next {
+  display: none;
+}
+
+.history table {
+    position: relative;
+    top: -9px;
+    left: 0px;
+    width: 65%;
+}
+.history td {
+    /*font-size: 15px;*/
+    line-height: 23px;         /* keep contents vertically centered */
+    padding: 1px 4px;
+    height: 23px;              /* fixed height */
+    width: 20px;
+    border: 3px solid white;
+    color: black;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    overflow: hidden;         /* prevent content from expanding the cell */
+    box-sizing: border-box;
+}
+
+.history-table th:first-child,
+.history-table td:first-child {
+    width: 13ch;          /* space for ~13 characters */
+    max-width: 13ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+/* If your cell content is wrapped in a span, ensure the span also truncates */
+.history-table td:first-child > span {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.jspsych-btn .jspsych-survey-html-form {
+    position: relative;
+    top: -100px;
+}
+
+.column img { /*makes the images transitiable for the hovering*/
+    transition: transform 0.2s ease-in-out;
+}
+.column img:hover {
+    transform: scale(1.1);
+}
+
+/* left animal column (1st) and right animal column (3rd) should allow ~13 chars */
+.history-table th:first-child,
+.history-table td:first-child,
+.history-table th:nth-child(3),
+.history-table td:nth-child(3) {
+    width: 13ch;
+    max-width: 13ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+/* reward columns (2nd and 4th) smaller */
+.history-table td:nth-child(2),
+.history-table td:nth-child(4) {
+    width: 4em;
+    text-align: center;
+}
+
+/* If your cell content is wrapped in a span, ensure truncation applies to both name columns */
+.history-table td:first-child > span,
+.history-table td:nth-child(3) > span {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.history-table tr { height: 23px; }               /* enforce row height */
+.history-table td,
+.history-table th {
+    height: 23px;                                   /* fixed cell height */
+    line-height: 23px;                              /* center content vertically */
+    vertical-align: middle;
+    overflow: hidden;                               /* avoid resizing */
+    box-sizing: border-box;
+}
